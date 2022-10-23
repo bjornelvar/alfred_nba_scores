@@ -1,6 +1,7 @@
 # NBA Scores
 
 ## Easily check the current scores in the NBA by typing in 'nba'.
+### [DOWNLOAD THE WORKFLOW HERE](https://github.com/bjornelvar/alfred_nba_scores/raw/main/NBA%20Scores.alfredworkflow)
 
 #### All items will take you the the game's NBA website.
 * You can use the built-in command+num hotkey.

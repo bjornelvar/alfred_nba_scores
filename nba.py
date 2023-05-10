@@ -51,7 +51,7 @@ class NBAScoreboard:
                     results.append({
                         "title": f"{i[0]} {i[1]} - {i[2]} {i[3]}\t\t({gametime_list[scores_list.index(i)]})",
                         "subtitle": f"{j[0]}: {j[1]}pts/{j[2]}reb/{j[3]}ast - {j[4]}: {j[5]}pts/{j[6]}reb/{j[7]}ast",
-                        "arg": f"{self.base_url}{self.todays_games[scores_list.index(i)]['awayTeam'].get('teamTricode')}-vs-{self.todays_games[scores_list.index(i)]['homeTeam'].get('teamTricode')}-{self.todays_games[scores_list.index(i)]['gameId']}/box-score",
+                        "arg": f"{self.base_url}{self.todays_games[scores_list.index(i)]['awayTeam'].get('teamTricode')}-vs-{self.todays_games[scores_list.index(i)]['homeTeam'].get('teamTricode')}-{self.todays_games[scores_list.index(i)]['gameId']}/box-score#box-score",
                     })
             return results
 

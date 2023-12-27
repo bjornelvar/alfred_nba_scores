@@ -152,3 +152,5 @@ cython_debug/
 #.idea/
 .DS_Store
 examples/.DS_Store
+examples/png/.DS_Store
+examples/.DS_Store

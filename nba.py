@@ -9,8 +9,9 @@ class NBAScoreboard:
 
     def create_lists(self):
         scores_list = []
-        gametime_list = []
+        gametime_list = [] # Only for ET and game status, useful for live games
         player_leaders = []
+        times_list = [] # This is for timezones and such
         for i in range(len(self.todays_games)):
             scores_list.append([
                 self.todays_games[i]["awayTeam"].get("teamTricode"),

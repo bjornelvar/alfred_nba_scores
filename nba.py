@@ -1,9 +1,9 @@
 import sys
 import json
 from lib.nba_api.live.nba.endpoints.scoreboard import ScoreBoard
-import pytz
+import lib.pytz as pytz
 from datetime import datetime
-from tzlocal import get_localzone
+from lib.tzlocal import get_localzone
 
 class NBAScoreboard:
     def __init__(self):

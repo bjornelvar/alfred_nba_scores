@@ -155,3 +155,4 @@ cython_debug/
 examples/.DS_Store
 examples/png/.DS_Store
 examples/.DS_Store
+*.code-workspace

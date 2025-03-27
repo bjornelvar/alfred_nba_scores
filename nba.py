@@ -12,6 +12,10 @@ class NBAScoreboard:
         self.utc_tz = pytz.utc  # UTC timezone
         self.local_tz = get_localzone()  # Local timezone
 
+    def status_nomenclature(self, status):
+        if status == "Final":
+            return "F"
+
     def create_lists(self):
         data = {
             "scores_list": [],

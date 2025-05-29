@@ -50,7 +50,7 @@ def format_games(games):
             if game["seriesGameNumber"] != "":
                 subtitle = f"{gametime} - {game['seriesGameNumber']} ({game['seriesText']})"
             else:
-                # Just put game time if not a playoff game
+                # Putting regular season record as well as the gametime.
                 subtitle = f"{gametime} - {away_code} {away['wins']}-{away['losses']} {home_code} {home['wins']}-{home['losses']}"
             title = f"{away_code} @ {home_code}"
             arg = f"{BASE_URL}{away_code}-vs-{home_code}-{gid}"

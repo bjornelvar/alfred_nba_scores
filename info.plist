@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>com.nba_scores.bjornelvar</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>22EE12D6-D7AC-40AE-8B35-71927C146C70</key>
@@ -21,9 +23,9 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Bjorn Elvar (@verkfall)</string>
+	<string>Bjorn Elvar</string>
 	<key>description</key>
-	<string>Displays today's games with stat leaders. Timezones added!</string>
+	<string>Displays today's games with stat leaders</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -58,8 +60,7 @@
 				<key>runningsubtext</key>
 				<string>Getting today's games…</string>
 				<key>script</key>
-				<string>export PYTHONPATH='./lib'
-python3 ./nba.py</string>
+				<string>python3 ./nba.py</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -129,8 +130,7 @@ python3 ./nba.py</string>
 				<key>runningsubtext</key>
 				<string>Getting the Eastern Conference...</string>
 				<key>script</key>
-				<string>export PYTHONPATH='./lib'
-python3 ./nba_east_standings.py</string>
+				<string>python3 ./nba_standings.py east</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -179,8 +179,7 @@ python3 ./nba_east_standings.py</string>
 				<key>runningsubtext</key>
 				<string>Getting the Western Conference...</string>
 				<key>script</key>
-				<string>export PYTHONPATH='./lib'
-python3 ./nba_west_standings.py</string>
+				<string>python3 ./nba_standings.py west</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -203,7 +202,7 @@ python3 ./nba_west_standings.py</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string></string>
+	<string>0.9.6 - Fixed timezones, added logos for conferences, fixed mojibake.</string>
 	<key>uidata</key>
 	<dict>
 		<key>143E1DEC-CB30-48E6-B0F2-937D290EBFEC</key>
@@ -318,7 +317,7 @@ python3 ./nba_west_standings.py</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.9.5</string>
+	<string>0.9.6</string>
 	<key>webaddress</key>
 	<string>bjossi.dev</string>
 </dict>

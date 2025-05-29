@@ -1,27 +1,9 @@
 #!/usr/bin/env python3
 import sys
 import json
-import urllib.request
-import urllib.error
 from datetime import datetime, timezone
 
-API_URL  = "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/scoreboard/todaysScoreboard_00.json"
 BASE_URL = "https://www.nba.com/game/"
-
-def fetch_games():
-    req = urllib.request.Request(API_URL, headers={"User-Agent": "Mozilla/5.0"})
-    try:
-        with urllib.request.urlopen(req) as resp:
-            status = resp.getcode()
-            if status != 200:
-                raise RuntimeError(f"Failed to fetch scoreboard: HTTP {status}")
-            data = json.load(resp)
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"HTTP Error {e.code}: {e.reason}") from e
-    except urllib.error.URLError as e:
-        raise RuntimeError(f"URL Error: {e.reason}") from e
-
-    return data["scoreboard"]["games"]
 
 def fix_mojibake(s: str) -> str:
     # Fixing stupid mojibake in the response
@@ -29,6 +11,20 @@ def fix_mojibake(s: str) -> str:
         return s.encode('latin-1').decode('utf-8')
     except (UnicodeEncodeError, UnicodeDecodeError):
         return s
+
+
+def fetch_games():
+    # read from a local JSON file instead of hitting the API
+    path = "/Users/bjossi/GitHub/alfred_nba_scores/data/games.json"
+    path = "/Users/bjossi/GitHub/alfred_nba_scores/data/01_nostart.json"
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        raise RuntimeError(f"File not found: {path}")
+    except json.JSONDecodeError as e:
+        raise RuntimeError(f"Invalid JSON in {path}: {e}")
+    return data["scoreboard"]["games"]
 
 def format_games(games):
     items = []
@@ -50,7 +46,7 @@ def format_games(games):
             if game["seriesGameNumber"] != "":
                 subtitle = f"{gametime} - {game['seriesGameNumber']} ({game['seriesText']})"
             else:
-                # Putting regular season record as well as the gametime.
+                # Just put game time if not a playoff game
                 subtitle = f"{gametime} - {away_code} {away['wins']}-{away['losses']} {home_code} {home['wins']}-{home['losses']}"
             title = f"{away_code} @ {home_code}"
             arg = f"{BASE_URL}{away_code}-vs-{home_code}-{gid}"
@@ -74,7 +70,7 @@ def format_games(games):
 def main():
     games  = fetch_games()
     output = {"items": format_games(games)}
-    sys.stdout.write(json.dumps(output))
+    sys.stdout.write(json.dumps(output, ensure_ascii=False))
 
 if __name__ == "__main__":
     main()

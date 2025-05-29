@@ -1,0 +1,249 @@
+{
+  "meta": {
+    "version": 1,
+    "request": "https://nba-prod-us-east-1-mediaops-stats.s3.amazonaws.com/NBA/liveData/scoreboard/todaysScoreboard_00.json",
+    "time": "2025-05-10 04:27:03.273",
+    "code": 200
+  },
+  "scoreboard": {
+    "gameDate": "2025-05-10",
+    "leagueId": "00",
+    "leagueName": "National Basketball Association",
+    "games": [
+      {
+        "gameId": "0042400213",
+        "gameCode": "20250510/BOSNYK",
+        "gameStatus": 2,
+        "gameStatusText": "2nd Qtr             ",
+        "period": 2,
+        "gameClock": "PT09M46.00S",
+        "gameTimeUTC": "2025-05-10T19:30:00Z",
+        "gameEt": "2025-05-10T15:30:00Z",
+        "regulationPeriods": 4,
+        "ifNecessary": false,
+        "seriesGameNumber": "Game 3",
+        "gameLabel": "East Conf. Semifinals",
+        "gameSubLabel": "Game 3",
+        "seriesText": "NYK leads 2-0",
+        "seriesConference": "East",
+        "poRoundDesc": "Conf. Semifinals",
+        "gameSubtype": "",
+        "isNeutral": false,
+        "homeTeam": {
+          "teamId": 1610612752,
+          "teamName": "Knicks",
+          "teamCity": "New York",
+          "teamTricode": "NYK",
+          "wins": 2,
+          "losses": 0,
+          "score": 25,
+          "seed": 3,
+          "inBonus": null,
+          "timeoutsRemaining": 4,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 20
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 5
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "awayTeam": {
+          "teamId": 1610612738,
+          "teamName": "Celtics",
+          "teamCity": "Boston",
+          "teamTricode": "BOS",
+          "wins": 0,
+          "losses": 2,
+          "score": 38,
+          "seed": 2,
+          "inBonus": null,
+          "timeoutsRemaining": 6,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 36
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 2
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "gameLeaders": {
+          "homeLeaders": {
+            "personId": 1628973,
+            "name": "Jalen Brunson",
+            "jerseyNum": "11",
+            "position": "G",
+            "teamTricode": "NYK",
+            "playerSlug": null,
+            "points": 6,
+            "rebounds": 1,
+            "assists": 2
+          },
+          "awayLeaders": {
+            "personId": 1627759,
+            "name": "Jaylen Brown",
+            "jerseyNum": "7",
+            "position": "G-F",
+            "teamTricode": "BOS",
+            "playerSlug": null,
+            "points": 7,
+            "rebounds": 3,
+            "assists": 2
+          }
+        },
+        "pbOdds": {
+          "team": null,
+          "odds": 0.0,
+          "suspended": 0
+        }
+      },
+      {
+        "gameId": "0042400233",
+        "gameCode": "20250510/MINGSW",
+        "gameStatus": 1,
+        "gameStatusText": "8:30 pm ET",
+        "period": 0,
+        "gameClock": "",
+        "gameTimeUTC": "2025-05-11T00:30:00Z",
+        "gameEt": "2025-05-10T20:30:00Z",
+        "regulationPeriods": 4,
+        "ifNecessary": false,
+        "seriesGameNumber": "Game 3",
+        "gameLabel": "West Conf. Semifinals",
+        "gameSubLabel": "Game 3",
+        "seriesText": "Series tied 1-1",
+        "seriesConference": "West",
+        "poRoundDesc": "Conf. Semifinals",
+        "gameSubtype": "",
+        "isNeutral": false,
+        "homeTeam": {
+          "teamId": 1610612744,
+          "teamName": "Warriors",
+          "teamCity": "Golden State",
+          "teamTricode": "GSW",
+          "wins": 1,
+          "losses": 1,
+          "score": 0,
+          "seed": 7,
+          "inBonus": null,
+          "timeoutsRemaining": 0,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "awayTeam": {
+          "teamId": 1610612750,
+          "teamName": "Timberwolves",
+          "teamCity": "Minnesota",
+          "teamTricode": "MIN",
+          "wins": 1,
+          "losses": 1,
+          "score": 0,
+          "seed": 6,
+          "inBonus": null,
+          "timeoutsRemaining": 0,
+          "periods": [
+            {
+              "period": 1,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 2,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 3,
+              "periodType": "REGULAR",
+              "score": 0
+            },
+            {
+              "period": 4,
+              "periodType": "REGULAR",
+              "score": 0
+            }
+          ]
+        },
+        "gameLeaders": {
+          "homeLeaders": {
+            "personId": 0,
+            "name": "",
+            "jerseyNum": "",
+            "position": "",
+            "teamTricode": "GSW",
+            "playerSlug": null,
+            "points": 0,
+            "rebounds": 0,
+            "assists": 0
+          },
+          "awayLeaders": {
+            "personId": 0,
+            "name": "",
+            "jerseyNum": "",
+            "position": "",
+            "teamTricode": "MIN",
+            "playerSlug": null,
+            "points": 0,
+            "rebounds": 0,
+            "assists": 0
+          }
+        },
+        "pbOdds": {
+          "team": null,
+          "odds": 0.0,
+          "suspended": 0
+        }
+      }
+    ]
+  }
+}
